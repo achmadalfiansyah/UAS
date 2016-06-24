@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int kambing[10];
+
+    cout<<"masukkan nilai pada : "<<endl;
+    for(int k=0;k<10;k++)
+    {
+        cout<<"kambing ["<<k<<"]=";
+        cin>>kambing[k];
+    }
+
+cout<<"\n";
+cout<<"tampilkan data domba yang telah diinput: "<<endl;
+for(int d=0;d<10;d++)
+{
+    cout<<"Berat kambing ke ";
+    cout<<d+1<<" = " <<kambing[d]<<endl;
+}
+cout<<"\n";
+
+    cout<<"Masukkan usia domba yang akan dicari = ";
+    cin>>k;
+    cout<<endl;
+
+    cout<<"Domba yang anda cari memiliki nomor urut ke = ";
+    for(d=0;d<10;d++){
+        if(nilai[k]==d){
+            cout<<k;
+        }
+    }
+return 0;
+}
