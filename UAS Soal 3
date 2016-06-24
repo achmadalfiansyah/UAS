@@ -1,0 +1,71 @@
+#include <iostream>
+
+using namespace std;
+
+struct WARTEG {
+    char paket;
+    int hargapaket;
+    int hargamenu;
+    int jumlah_paket;
+    float menu;
+    int jumlah_menu;
+    int jumlah;
+    int total;
+    int pajak;
+    int totalmenu;
+
+};
+WARTEG input;
+    void MenuUtamaWarteg() {
+        if (input.paket=='A'){input.hargapaket=20000;}
+        else if (input.paket=='B'){input.hargapaket=18000;}
+        else {input.hargapaket=17000;}
+
+        cout<<"--------------------------"<<endl;
+        cout<<"Kode Paket yang dipilih     = ";
+        cin>>input.paket;
+        cout<<"Jumlah paket                = ";
+        cin>>input.jumlah_paket;
+        cout<<endl;
+        }
+
+    void MenuTambahanWarteg() {
+        if(input.menu=='101'){input.hargamenu=3000;}
+        else if(input.menu=='102'){input.hargamenu=5000;}
+        else if(input.menu=='201'){input.hargamenu=2000;}
+        else if(input.menu=='301'){input.hargamenu=3000;}
+        else{input.hargamenu=3000;}
+
+        cout<<"--------------------------"<<endl;
+        cout<< "Kode Menu yang dipilih  = ";
+        cin>> input.menu;
+        cout<< "Jumlah pilihan menu     = ";
+        cin>> input.jumlah_menu;
+        cout<< endl;
+        }
+
+    void HitungPajak() {
+        input.jumlah=((input.hargapaket*input.jumlah_paket)+(input.hargamenu*input.jumlah_menu));
+        input.pajak= 0.1*input.jumlah;
+
+        cout<<"--------------------------"<<endl;
+        cout<<"Jumlah Harga keseluruhan  = " << input.jumlah<< endl;
+        cout<<"Potongan Pajak 10%        = " << input.pajak;
+        cout<<endl;
+    }
+
+    void HitungTotal() {
+        input.total=input.jumlah-input.pajak;
+
+        cout<<"Total Transaksi      = " << input.total;
+    }
+
+int main() {
+    WARTEG input;
+    MenuUtamaWarteg();
+    MenuTambahanWarteg();
+    HitungPajak();
+    HitungTotal();
+
+    return 0;
+}
